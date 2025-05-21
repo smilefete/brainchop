@@ -13,7 +13,7 @@ COPY package-lock.json package-lock.json
 COPY package.json package.json
 COPY tsconfig.config.json tsconfig.config.json
 COPY tsconfig.json tsconfig.json
-COPY vite.config.ts vite.config.ts
+COPY vite.config.js vite.config.js
 
 RUN npm install
 RUN npm run build
