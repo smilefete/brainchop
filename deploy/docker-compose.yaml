@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  common:
+    external: true
+
+services:
+  ads-trial:
+    container_name: ads-trial
+    image: 'ads-trial:dev'
+    networks:
+      - common
+    tty: true
+    privileged: true
+    restart: always
