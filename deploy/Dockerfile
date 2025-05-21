@@ -2,17 +2,23 @@ FROM node:19-alpine3.16
 
 WORKDIR /work
 
+
+COPY css css
+COPY docs docs
 COPY public public
-COPY src src
-COPY .eslintignore .eslintignore
-COPY .eslintrc.cjs .eslintrc.cjs
-COPY .prettierrc.json .prettierrc.json
-COPY env.d.ts env.d.ts
+COPY py2tfjs py2tfjs
+COPY v3 v3
+COPY brainchop-diagnostics.js brainchop-diagnostics.js
+COPY brainchop-mainthread.js brainchop-mainthread.js
+COPY brainchop-parameters.js brainchop-parameters.js
+COPY brainchop-webworker.js brainchop-webworker.js
+COPY bwlabels.js bwlabels.js
+COPY main.js main.js
+COPY playwright.config.cjs playwright.config.cjs
+COPY tensor-utils.js tensor-utils.js
 COPY index.html index.html
 COPY package-lock.json package-lock.json
 COPY package.json package.json
-COPY tsconfig.config.json tsconfig.config.json
-COPY tsconfig.json tsconfig.json
 COPY vite.config.js vite.config.js
 
 RUN npm install
